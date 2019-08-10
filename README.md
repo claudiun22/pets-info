@@ -16,6 +16,6 @@ Frontend:
 
 Main functionalities include:
 - CRUD backend functionality with SpringData
-  - View veterinary clinics with free services and gues houses which allows pets as public views
+  - View veterinary clinics with free services and guest houses which allows pets as public views
   - Log in functionality set up with Spring Security
   - Administration of clinics and houses by editing, creating and deleting
