@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<div th:insert="header :: header"></div>
+	
+	<title>CABINETE</title>
+
+</head>
+
+<body>
+	<div th:insert="nav :: nav"></div>
+
+     	<div class="container grid mt-5">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+		 			<form action="#" th:action="@{/petsinfo/addCabinet}" th:object="${cabinet}" method="post">
+		 			
+						<div class="form-group">
+						  <label for="nume" class="form-label">Nume</label>
+						  <input type="text" th:field="*{nume}" class="form-control" id="nume" placeholder="Nume">
+						</div>
+		 				
+						<div class="form-group">
+						  <label for="locatie" class="form-label">Locatie</label>
+						  <input type="text" th:field="*{locatie}" class="form-control" id="locatie" placeholder="Locatie">
+						</div>
+						
+						<div class="form-group">
+						  <label for="telefon" class="form-label">Telefon</label>
+						  <input type="text" th:field="*{telefon}" class="form-control" id="telefon" placeholder="Telefon">
+						</div>
+						
+						<div class="form-group">
+						  <label for="descriere" class="form-label">Descriere</label>
+						  <input type="text" th:field="*{descriere}" class="form-control" id="descriere" placeholder="Descriere">
+						</div>
+						
+		 				<div class="form-group">
+						  <label for="url" class="form-label">URL</label>
+						  <input type="text" th:field="*{url}" class="form-control" id="url" placeholder="URL">
+						</div>
+						
+						
+						<div class="form-group">
+						  <label for="doctor" class="form-label">Doctor</label>
+						  <input type="text" th:field="*{doctor}" class="form-control" id="doctor" placeholder="Doctor">
+						</div>
+						
+						<div class="form-group  d-flex justify-content-between align-items-center w-100">
+						<a class="btn-dogs btn btn-primary" href="/petsinfo/admincabinete">Inapoi</a>
+							<input type="submit" value="Adauga" name="addCabinet" class="btn-dogs btn btn-primary">
+						</div>
+						
+						
+					</form>
+					
+				
+				</div>
+				 <img th:insert="paws :: paws"></img>
+			</div>
+			
+		</div>
+
+ 		
+ 		
+        
+        
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript">
+$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</body>
+</html>

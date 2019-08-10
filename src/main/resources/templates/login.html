@@ -1,0 +1,46 @@
+<div th:insert="header :: header"></div>
+
+
+<title>LOG IN</title>
+
+</head>
+
+<body>
+	
+	<div th:insert="nav :: nav"></div>
+	
+	
+	<div class="container grid ">
+	
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<img th:src="@{/img/doggo-login.png}" class="rounded mx-auto d-block"  alt="">
+				<p class="h2 dark-green mb-5 mt-1 text-center">AUTENTIFICARE</p>
+				<div th:if="${param.error}">
+	           		<h4>Invalid username and password.</h4>
+	       		</div>
+		        <div th:if="${param.logout}">
+		           <h4> You have been logged out.</h4>
+		        </div>
+			        <form th:action="@{/login}" method="post">
+			        
+			          <div class="form-group">
+					    <input type="text" class="form-control dogs-form " id="username" name="username" placeholder="User">
+					    <input type="text" class="form-control dogs-form no-bd-top" id="password" name="password" placeholder="Parola">
+					  </div>
+					  
+					   <button type="submit" class="mt-4 btn-dogs btn btn-primary btn-lg btn-block">Autentificare</button>
+					   
+			        </form>
+			</div>
+		</div>
+		<img th:insert="paws :: paws"></img>
+	</div>
+	
+	
+
+<div th:insert="footer :: footer"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<div th:insert="header :: header"></div>
+
+
+<title>HOME</title>
+
+</head>
+
+<body>
+	
+	<div th:insert="nav :: nav"></div>
+	
+	<div class="jumbotron jumbotron-fluid homepage-jumbotron no-margin">
+	  <div class="container">
+	    <h1 class="display-4"></h1>
+	    <p class="lead"></p>
+	  </div>
+	</div>
+	
+	<div class="container grid ">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card ml-5 mr-5 mb-5 mt-5">
+				  <img class="card-img-top" th:src="@{/img/pensiune.png}" alt="pensiune card image">
+				  <div class="card-body">
+				    <h5 class="card-title">Pensiuni dog friendly</h5>
+				    <p class="card-text">Pensiuni dog friendly care permit cazarea alaturi de blanosii patrupezi.</p>
+				    <a href="/petsinfo/pensiuni" class="btn btn-primary btn-dogs">Vezi lista</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-6 content-index">
+				<div class="card ml-5 mr-5 mb-5 mt-5">
+				  <img class="card-img-top" th:src="@{/img/vet.png}" alt="cabinet card image">
+				  <div class="card-body">
+				    <h5 class="card-title">Cabinete</h5>
+				    <p class="card-text">Lista cabinetelor care ofera sterilizare gratuita pentru animale de companie.</p>
+				    <a href="/petsinfo/cabinete" class=" btn-dogs btn btn-primary ">Vezi lista</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<img th:insert="paws :: paws"></img>
+	</div>
+	
+	
+
+<div th:insert="footer :: footer"></div>
+
+</body>
+
+</html>

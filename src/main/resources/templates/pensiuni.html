@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<div th:insert="header :: header"></div>
+	
+	<title>CABINETE</title>
+
+</head>
+
+<body>
+	<div th:insert="nav :: nav"></div>
+		
+		 <div class="jumbotron jumbotron-fluid cabinete-jumbotron no-margin">
+		  <div class="container">
+		    <h1 class="display-4">LISTA PENSIUNI</h1>
+		    <p class="lead">Pensiuni dog friendly care permit cazarea alaturi de blanosii patrupezi.</p>
+		    
+		  </div>
+		</div>
+	
+        <div class="container">
+        <div class="grid">
+        	<div class="col-lg-4">
+        	<form action="#" th:action="@{/pensiuni}" class="mb-5" method="POST" th:object="${oras}" >
+        	    <select name="oras" class="custom-select mt-5 mb-3">
+				  <option selected>Alege orasul</option>
+					<th:block th:each="oras: ${listaOrase }">
+					  <option  th:value="${oras}" th:text="${oras}"></option>
+					</th:block>
+				</select>
+			
+				<input type="submit" value="Cauta" class="btn-dogs btn btn-primary mb-3">
+			</form>
+				
+				
+				<ul class="list-group list-group-flush mb-5">
+					<th:block th:each="oras : ${orase }">
+						<li class="list-group-item"><a th:href="|petsinfo/pensiune/${oras.id }|" data-toggle="tooltip" data-placement="right" data-offset="-3" title="Detalii" class="blue-tooltip text-decoration-none"><span th:text="${oras.nume_pensiune }"></span></a></li>
+					</th:block>
+				</ul>
+				
+		 		
+			<span th:if="${pensiuni != null}">
+		 		<ul class="list-group list-group-flush mb-5">
+					<th:block th:each="pensiune : ${pensiuni }">
+						<li class="list-group-item"><a th:href="|pensiune/${pensiune.id }|" data-toggle="tooltip" data-placement="right" data-offset="-3" title="Detalii" class="blue-tooltip text-decoration-none"><span th:text="${pensiune.nume_pensiune }"></span></a></li>
+					</th:block>
+		        </ul>
+		    </span>
+        	</div>
+        </div>
+     
+        
+        
+            <a href="/petsinfo/" class=" btn-dogs btn btn-primary ">Acasa</a>
+            
+            <img th:insert="paws :: paws"></img>
+        </div>
+        
+        
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript">
+$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</body>
+</html>

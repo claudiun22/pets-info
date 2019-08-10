@@ -1,0 +1,180 @@
+@charset "ISO-8859-1";
+
+html{
+	background-color: #d1dfd2 !important;
+}
+
+a{
+	text-decoration: none;
+}
+
+body {
+	background-color: #d1dfd2 !important;
+}
+
+.dogs-nav {
+	background-color: #46854c !important;
+}
+
+ 
+.nav-white {
+	color:#fff !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.homepage-jumbotron {
+	background-image: url("/petsinfo/img/hero-banner.jpg");
+	background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  height: 500px;
+	  color: #fff;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.btn-dogs {
+	background-color: #46854c;
+	border-color: #46854c;
+	color: #fff !important;
+}
+
+.card-title {
+	color: #46854c;
+}
+
+.content-index {
+	z-index: 2;
+}
+
+.float-paws {
+	position: relative;
+	bottom: 70px;
+	z-index: 1;
+}
+
+
+.cabinete-jumbotron {
+	background-image: url("/petsinfo/img/cabinetehero.png");
+	background-position: bottom;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  height: 400px;
+	  color: #fff;
+}
+
+.list-group-item {
+	background-color: #d1dfd2;
+	border-color: #00867d;
+}
+
+.list-group-item a {
+	color: #46854c;	
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: #00867d;
+    border-radius: .25rem;
+}
+
+
+.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+    right: 0;
+    margin-top: -3px;
+    content: "";
+    border-width: 5px 0 5px 5px;
+    border-left-color: #00867d;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+    margin-top: -3px;
+    content: "";
+    border-width: 5px 5px 5px 0;
+    border-right-color: #00867d;
+}
+
+.form-label {
+	color: #46854c;
+}
+
+::placeholder {
+	color: #46854c !important;
+	opacity: 1;
+}
+
+input, select, textarea{
+    color: #46854c !important;
+    border-color: #46854c;
+}
+
+.dogs-form {
+	border-color: #46854c;
+}
+
+.no-bd-top {
+	border-top: 0;
+}
+
+.no-bd-bot {
+	border-bottom: 0;
+}
+
+
+textarea:focus, input:focus {
+    color: #46854c !important;
+    border-color: #46854c !important;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.form-control:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25) !important; 
+}
+
+.dark-green {
+	color: #00867d !important;
+}
+
+.light-green {
+	color: #46854c !important;
+}
+
+.btn-dogs:active {
+	background-color: #00867d !important;
+	border-color: #00867d !important;
+}
+
+.btn-dogs:hover {
+	background-color: #00867d !important;
+	border-color: #00867d !important;
+}
+
+.detalii-title, .detalii-header {
+	background-color: #9bc5c2;
+	color: #00867d;
+	
+}
+
+.detalii-header {
+	border: 1px solid #00867d;
+	border-bottom: 0;
+}
+
+.card-body-detalii {
+	background-color: #d1dfd2;
+    border: 1px solid #00867d;
+    color: #46854c;
+    border-top: 0;
+}
+
+.header-admin {
+	height: 100px;
+}

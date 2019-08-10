@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<div th:insert="header :: header"></div>
+	
+	<title>CABINETE</title>
+
+</head>
+
+<body>
+	<div th:insert="nav :: nav"></div>
+	
+	
+	<span th:if="${edit == false}">
+        <div class="container">
+        <div class="grid">
+        	<div class="col-lg-6">
+        	    <select class="custom-select mt-5 mb-5">
+				  <option selected>Alege orasul</option>
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+		 		
+		 		<ul class="list-group list-group-flush mb-5 content-index">
+					<th:block th:each="pensiune : ${pensiuni }">
+						<li class="list-group-item d-flex justify-content-between align-items-center w-100"><span th:text="${pensiune.nume_pensiune }" class="light-green"></span><a th:href="|adminpensiuni/${pensiune.id }|" data-toggle="tooltip" data-placement="right" data-offset="-3" title="Detalii" class="blue-tooltip text-decoration-none dark-green">Editare</a></li>
+					</th:block>
+		        </ul>
+		        <div class="form-group d-flex justify-content-between align-items-center w-100">
+		            <a href="/petsinfo/admin" class=" btn-dogs btn btn-primary ">Inapoi</a>
+		            <a href="/petsinfo/addPensiune" class=" btn-dogs btn btn-primary ">Adauga</a>
+		        </div>
+        	</div>
+        <img th:insert="paws :: paws"></img>
+        </div>
+     
+        
+        
+            
+           
+        </div>
+        
+     </span>
+     
+     <span th:if="${edit}">
+     	<div class="container grid mt-5">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+		 			<form  action="#" th:action="@{/adminpensiuni/{id}(id=${pensiune.id})}" th:object="${pensiune}" method="post" >
+		 			
+						<div class="form-group">
+						  <label for="nume" class="form-label">Nume</label>
+						  <input type="text" th:field="*{nume_pensiune}" class="form-control" id="nume" placeholder="Nume">
+						</div>
+		 				
+						<div class="form-group">
+						  <label for="oras" class="form-label">Oras</label>
+						  <input type="text" th:field="*{oras}" class="form-control" id="oras" placeholder="Oras">
+						</div>
+						
+						<div class="form-group">
+						  <label for="judet" class="form-label">Judet</label>
+						  <input type="text" th:field="*{judet}" class="form-control" id="judet" placeholder="Judet">
+						</div>
+						
+						<div class="form-group">
+						  <label for="contact" class="form-label">Contact</label>
+						  <input type="text"  th:field="*{contact}" class="form-control" id="contact" placeholder="Contact">
+						</div>
+						
+		 				<div class="form-group">
+						  <label for="url" class="form-label">URL</label>
+						  <input type="text" th:field="*{url}" class="form-control" id="url" placeholder="URL">
+						</div>
+
+						
+						<div class="form-group d-flex justify-content-between align-items-center w-100">
+							<input type="submit" value="Schimba" name="editCabinet" class="btn-dogs btn btn-primary">
+							<a class="btn btn-danger" th:href="@{petsinfo/deletePensiune/{id}(id=${pensiune.id})}">Elimina</a>
+						</div>
+					</form>
+					
+				<a class="btn-dogs btn btn-primary" href="/petsinfo/adminpensiuni">Inapoi</a>
+				</div>
+			</div>
+			 <img th:insert="paws :: paws"></img>
+		</div>
+			
+ 		</span>
+ 		
+ 		
+        
+        
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript">
+$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<div th:insert="header :: header"></div>
+
+
+<title>DETALII</title>
+
+</head>
+
+<body>
+	
+	<div th:insert="nav :: nav"></div>
+
+	
+	<div class="container grid ">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+					<div class="card mt-5 mb-5">
+					  <div class="card-header detalii-header">
+					  	<p class="h2 text-center detalii-title"  th:text="${pensiune.nume_pensiune }" ></p>
+					  </div>
+					  <div class="card-body card-body-detalii">
+					    <blockquote class="blockquote mb-0">
+					    	<h5 class="card-title text-center mb-4 mt-2">Detalii Contact</h5>
+					      <p  th:text="${pensiune.judet }" class="text-center"></p>
+					      <p  th:text="${pensiune.oras }" class="text-center"></p>
+					      <p  th:text="${pensiune.contact }" class="text-center"></p>
+					      <p class="text-center text-decoration-none"><a th:href="${pensiune.url }" class="text-decoration-none">URL Extern</a></p>
+					    </blockquote>
+					  </div>
+					</div>
+
+					<a href="/petsinfo/pensiuni" class=" btn-dogs btn btn-primary ">Inapoi la lista</a>
+			</div>
+		</div>
+		<img th:insert="paws :: paws"></img>
+	</div>
+	
+	
+
+<div th:insert="footer :: footer"></div>
+
+</body>
+
+</html>

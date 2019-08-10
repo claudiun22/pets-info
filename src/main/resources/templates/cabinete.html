@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<div th:insert="header :: header"></div>
+	
+	<title>CABINETE</title>
+
+</head>
+
+<body>
+	<div th:insert="nav :: nav"></div>
+		
+		 <div class="jumbotron jumbotron-fluid cabinete-jumbotron no-margin">
+		  <div class="container">
+		    <h1 class="display-4">LISTA CABINETE</h1>
+		    <p class="lead">Cabinete veterinare care sterlizeaza gratuit (lista nu este exhaustiva si va fi completata pe masura ce mai gasim informatii, iar Dvs. ne puteti ajuta sa o completam)</p>
+		    
+		  </div>
+		</div>
+	
+        <div class="container">
+        <div class="grid">
+        	<div class="col-lg-4">
+        	 	<form action="#" th:action="@{/petsinfo/cabinete}" class="mb-5" method="POST" th:object="${locatie}" >
+	        	    <select name="oras" class="custom-select mt-5 mb-3">
+					  <option selected>Alege orasul</option>
+						<th:block th:each="oras: ${listaOrase }">
+						  <option  th:value="${oras}" th:text="${oras}"></option>
+						</th:block>
+					</select>
+				
+					<input type="submit" value="Cauta" class="btn-dogs btn btn-primary mb-3">
+				</form>
+		 		
+		 		<ul class="list-group list-group-flush mb-5">
+					<th:block th:each="cabinet : ${cabinete }">
+						<li class="list-group-item"><a th:href="|cabinet/${cabinet.id }|" data-toggle="tooltip" data-placement="right" data-offset="-3" title="Detalii" class="blue-tooltip text-decoration-none"><span th:text="${cabinet.nume }"></span></a></li>
+					</th:block>
+		        </ul>
+        	</div>
+        </div>
+     
+        
+        
+            <a href="/petsinfo/" class=" btn-dogs btn btn-primary ">Acasa</a>
+            
+            <img th:insert="paws :: paws"></img>
+        </div>
+        
+        
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript">
+$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+</body>
+</html>
+
+<!-- 		<p> -->
+<!-- 			<b><span th:text="${cabinet.nume }"></span></b><br> -->
+<!-- 			<span th:text="${cabinet.locatie }"></span>  <br> -->
+<!-- 			<a th:href="|cabinet/${cabinet.id }|">Detalii</a> -->
+<!-- 		</p> -->

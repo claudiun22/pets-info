@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<div th:insert="header :: header"></div>
+
+
+<title>DETALII</title>
+
+</head>
+
+<body>
+	
+	<div th:insert="nav :: nav"></div>
+
+	
+	<div class="container grid ">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+					<div class="card mt-5 mb-5">
+					  <div class="card-header detalii-header header-admin">
+					  	<p class="h2 text-center detalii-title">ADMINISTRARE CABINETE MEDICALE</p>
+					  </div>
+					  <div class="card-body card-body-detalii">
+					    <blockquote class="blockquote mb-0">
+					      <p class="text-center">Lista cabinete veterinare</p>
+					      <p class="text-center">Stergere/Adaugare/Editare</p>
+					     <a href="/petsinfo/admincabinete" class=" btn-dogs btn btn-primary btn-lg btn-block">Administrare</a>
+					    </blockquote>
+					  </div>
+					</div>
+			</div>
+			
+			<div class="col-md-6">
+					<div class="card mt-5 mb-5 content-index">
+					  <div class="card-header detalii-header header-admin">
+					  	<p class="h2 text-center detalii-title">ADMINISTRARE PENSIUNI</p>
+					  </div>
+					  <div class="card-body card-body-detalii">
+					    <blockquote class="blockquote mb-0">
+					      <p class="text-center">Lista pensiuni dog friendly</p>
+					      <p class="text-center">Stergere/Adaugare/Editare</p>
+					      <a href="/petsinfo/adminpensiuni" class=" btn-dogs btn btn-primary btn-lg btn-block ">Administrare</a>
+					    </blockquote>
+					  </div>
+					</div>
+			</div>
+		</div>
+		<img th:insert="paws :: paws"></img>
+	</div>
+	
+	
+
+<div th:insert="footer :: footer"></div>
+
+</body>
+
+</html>
